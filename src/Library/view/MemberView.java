@@ -12,4 +12,16 @@ public class MemberView {
 
     // 2) controller 싱글톤 가져오기
     private MemberController memberController = MemberController.getInstance();
+
+    // 프로그램 최초 하면
+    public void index(){
+        for( ; ; ){
+            System.out.println("=========== 도서관리 시스템  ===========");
+            System.out.println("  1.회원가입 | 2.로그인");
+            System.out.println("==========================================");
+            System.out.println("선택 > ");
+
+        }
+    }
+
 }
