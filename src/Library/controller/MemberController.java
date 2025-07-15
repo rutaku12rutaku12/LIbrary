@@ -19,12 +19,8 @@ public class MemberController {
     // 3) 등록 기능 구현
     public int login( String mId , String mPwd ){
         int result = 0;
-        MemberDto memberDto = new MemberDto ( );
-
-
+        result = memberDao.login( mId, mPwd );
         //  성공시 result에 성공의 의미 "1" 반환
-        result = 1 ;
-
         return result;
     } // func end
 
