@@ -1,6 +1,7 @@
 package Library.controller;
 
 import Library.model.dao.BookDao;
+import Library.model.dao.MemberDao;
 
 public class BookController {
     // 1) 싱글톤
@@ -11,7 +12,9 @@ public class BookController {
     }
     // 2) dao 싱글톤 가져오기
     private BookDao bookDao = BookDao.getInstance();
-}
+
+
+} // class end
 
 
 

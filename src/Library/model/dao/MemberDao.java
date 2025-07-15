@@ -16,4 +16,25 @@ public class MemberDao {
     public ArrayList<MemberDto> returnMemberDB(){
         return memberDB;
     }
+    // 3) 등록 기능 구현
+    public int login( String mId , String mPwd ){
+        int result = 0;
+        ArrayList<MemberDto> memberList = returnMemberDB();
+
+        for (int i = 0 ; i < memberList.size(); i++){
+            if(mId.equals("admin") &&
+               memberList.get(i).getmPwd().equals(mPwd)){
+                result = 2;
+            }
+            else if(memberList.get(i).getmId().equals(mId) &&
+                    memberList.get(i).getmPwd().equals(mPwd)){
+                result = 1;
+                break;
+            } // if end
+
+        } // for end
+        return result;
+
+    } // func end
+
 }
