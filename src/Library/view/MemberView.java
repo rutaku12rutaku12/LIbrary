@@ -2,6 +2,8 @@ package Library.view;
 
 import Library.controller.MemberController;
 
+import java.util.Scanner;
+
 public class MemberView {
     // 1) 싱글톤
     private MemberView(){}
@@ -12,6 +14,8 @@ public class MemberView {
 
     // 2) controller 싱글톤 가져오기
     private MemberController memberController = MemberController.getInstance();
+
+    private Scanner scan = new Scanner(System.in);
 
     // 프로그램 최초 하면
     public void index(){
