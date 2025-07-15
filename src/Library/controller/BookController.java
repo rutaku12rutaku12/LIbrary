@@ -1,5 +1,7 @@
 package Library.controller;
 
+import Library.model.dao.BookDao;
+
 public class BookController {
     // 1) 싱글톤
     private BookController(){}
@@ -7,6 +9,8 @@ public class BookController {
     public static BookController getInstance(){
         return instance;
     }
+    // 2) dao 싱글톤 가져오기
+    private BookDao bookDao = BookDao.getInstance();
 }
 
 
