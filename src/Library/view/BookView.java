@@ -13,5 +13,4 @@ public class BookView {
     // 2) controller 싱글톤 가져오기
     private BookController bookController = BookController.getInstance();
 
-
 }

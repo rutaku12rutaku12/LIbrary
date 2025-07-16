@@ -13,6 +13,7 @@ public class BookController {
     // 2) dao 싱글톤 가져오기
     private BookDao bookDao = BookDao.getInstance();
 
+    // 3) 등록 기능구현
 
 } // class end
 

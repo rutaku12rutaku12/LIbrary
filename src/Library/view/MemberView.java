@@ -1,7 +1,9 @@
 package Library.view;
 
 import Library.controller.MemberController;
+import Library.model.dto.LoanDto;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MemberView {
@@ -31,7 +33,7 @@ public class MemberView {
 
     } // index()end
 
-    //3 등록 입출력 구현
+    // 3 등록 입출력 구현
     public void login(){
         // 1. 안내와 입력받기
         System.out.println("아이디: "); String mId = scan.next();
@@ -44,8 +46,21 @@ public class MemberView {
         }else if ( result == 0 ) {System.out.println("[경고] 로그인 실패");}
     } // func end
 
-    public void logout(){
 
+
+    // 사용자별 대출 현황
+    public void loanPrint(){
+        int choose = scan.nextInt(); // 지워질 예정
+        if( choose == 4 ) {
+
+            System.out.println("--- 나의 대출 현황 ---");
+            System.out.println("");
+        }
+}
+
+    // 로그아웃
+    public void logout(){
+        index();
     }
 
 } // class end
